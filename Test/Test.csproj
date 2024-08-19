@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputPath>..\Bin\Test</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NewLife.Fuji" Version="1.0.2022.1015-beta0123" />
+    <PackageReference Include="NewLife.Melsec" Version="1.2.2024.517" />
+    <PackageReference Include="NewLife.NetPing" Version="1.1.2024.217" />
+    <PackageReference Include="NewLife.Omron" Version="1.0.2023.511" />
+    <PackageReference Include="NewLife.OpcUa" Version="1.0.2023.511" />
+    <PackageReference Include="NewLife.PC" Version="1.0.2024.217" />
+    <PackageReference Include="NewLife.Schneider" Version="1.0.2024.218" />
+    <PackageReference Include="NewLife.Siemens" Version="1.1.2024.218" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DH.NIoT\DH.NIoT.csproj" />
+  </ItemGroup>
+
+</Project>
