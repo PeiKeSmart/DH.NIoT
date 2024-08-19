@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewLife.IoT\NewLife.IoT.csproj" />
+    <ProjectReference Include="..\DH.NIoT\DH.NIoT.csproj" />
   </ItemGroup>
 
 </Project>
