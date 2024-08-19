@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NewLife.Fuji" Version="1.0.2022.1015-beta0123" />
-    <PackageReference Include="NewLife.Melsec" Version="1.2.2024.517" />
-    <PackageReference Include="NewLife.NetPing" Version="1.1.2024.217" />
-    <PackageReference Include="NewLife.Omron" Version="1.0.2023.511" />
-    <PackageReference Include="NewLife.OpcUa" Version="1.0.2023.511" />
+    <PackageReference Include="DH.NFuji" Version="3.7.2024.819-beta1020" />
+    <PackageReference Include="DH.NMelsec" Version="3.7.2024.819-beta0936" />
+    <PackageReference Include="DH.NNetPing" Version="3.7.2024.819-beta0912" />
+    <PackageReference Include="DH.NOmron" Version="3.7.2024.819-beta0959" />
+    <PackageReference Include="DH.NOpcUa" Version="3.7.2024.819-beta1017" />
     <PackageReference Include="DH.NPC" Version="3.7.2024.819-beta0724" />
-    <PackageReference Include="NewLife.Schneider" Version="1.0.2024.218" />
-    <PackageReference Include="NewLife.Siemens" Version="1.1.2024.218" />
+    <PackageReference Include="DH.NSchneider" Version="3.7.2024.819-beta1030" />
+    <PackageReference Include="DH.NSiemens" Version="3.7.2024.819-beta1041" />
   </ItemGroup>
 
   <ItemGroup>
