@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.NFuji" Version="3.7.2024.826-beta0615" />
+    <PackageReference Include="DH.NFuji" Version="3.7.2024.828-beta0251" />
     <PackageReference Include="DH.NMelsec" Version="3.7.2024.826-beta0622" />
     <PackageReference Include="DH.NNetPing" Version="3.7.2024.826-beta0622" />
     <PackageReference Include="DH.NOmron" Version="3.7.2024.826-beta0623" />
