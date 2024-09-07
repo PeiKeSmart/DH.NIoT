@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.NFuji" Version="3.7.2024.902-beta0256" />
+    <PackageReference Include="DH.NFuji" Version="3.7.2024.903-beta0310" />
     <PackageReference Include="DH.NMelsec" Version="3.7.2024.902-beta0259" />
-    <PackageReference Include="DH.NNetPing" Version="3.7.2024.902-beta0302" />
-    <PackageReference Include="DH.NOmron" Version="3.7.2024.902-beta0303" />
-    <PackageReference Include="DH.NOpcUa" Version="3.7.2024.902-beta0305" />
-    <PackageReference Include="DH.NPC" Version="3.7.2024.902-beta0307" />
+    <PackageReference Include="DH.NNetPing" Version="3.7.2024.903-beta0428" />
+    <PackageReference Include="DH.NOmron" Version="3.7.2024.903-beta0430" />
+    <PackageReference Include="DH.NOpcUa" Version="3.7.2024.903-beta0430" />
+    <PackageReference Include="DH.NPC" Version="3.7.2024.903-beta0431" />
     <PackageReference Include="DH.NSchneider" Version="3.7.2024.902-beta0311" />
-    <PackageReference Include="DH.NSiemens" Version="3.7.2024.902-beta0312" />
+    <PackageReference Include="DH.NSiemens" Version="3.7.2024.903-beta0434" />
   </ItemGroup>
 
   <ItemGroup>
