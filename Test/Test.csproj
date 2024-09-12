@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.NFuji" Version="3.7.2024.911-beta1058" />
-    <PackageReference Include="DH.NMelsec" Version="3.7.2024.902-beta0259" />
-    <PackageReference Include="DH.NNetPing" Version="3.7.2024.911-beta0851" />
+    <PackageReference Include="DH.NFuji" Version="3.7.2024.911-beta1539" />
+    <PackageReference Include="DH.NMelsec" Version="3.7.2024.911-beta1555" />
+    <PackageReference Include="DH.NNetPing" Version="3.7.2024.911-beta1606" />
     <PackageReference Include="DH.NOmron" Version="3.7.2024.911-beta0853" />
     <PackageReference Include="DH.NOpcUa" Version="3.7.2024.911-beta0853" />
     <PackageReference Include="DH.NPC" Version="3.7.2024.911-beta0855" />
