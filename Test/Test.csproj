@@ -10,10 +10,10 @@
   <ItemGroup>
     <PackageReference Include="DH.NFuji" Version="3.7.2024.1008-beta0831" />
     <PackageReference Include="DH.NMelsec" Version="3.7.2024.920-beta0152" />
-    <PackageReference Include="DH.NNetPing" Version="3.91.2024.1008-beta0857" />
+    <PackageReference Include="DH.NNetPing" Version="3.91.2024.1013-beta0938" />
     <PackageReference Include="DH.NOmron" Version="3.7.2024.920-beta0154" />
     <PackageReference Include="DH.NOpcUa" Version="3.7.2024.1008-beta0917" />
-    <PackageReference Include="DH.NPC" Version="3.91.2024.1008-beta0918" />
+    <PackageReference Include="DH.NPC" Version="3.91.2024.1013-beta0941" />
     <PackageReference Include="DH.NSchneider" Version="3.9.2024.9210003" />
     <PackageReference Include="DH.NSiemens" Version="3.9.2024.9210003" />
   </ItemGroup>
