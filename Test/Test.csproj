@@ -13,7 +13,7 @@
     <PackageReference Include="DH.NNetPing" Version="4.0.2024.1119-beta0757" />
     <PackageReference Include="DH.NOmron" Version="3.7.2024.920-beta0154" />
     <PackageReference Include="DH.NOpcUa" Version="3.7.2024.1008-beta0917" />
-    <PackageReference Include="DH.NPC" Version="3.91.2024.1109-beta0325" />
+    <PackageReference Include="DH.NPC" Version="4.0.2024.1119-beta0825" />
     <PackageReference Include="DH.NSchneider" Version="3.9.2024.9210003" />
     <PackageReference Include="DH.NSiemens" Version="3.9.2024.9210003" />
   </ItemGroup>
