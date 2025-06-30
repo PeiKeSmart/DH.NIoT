@@ -41,6 +41,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ThingSpecification\PropertyExtend.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Protocols\**" />
     <EmbeddedResource Remove="Protocols\**" />
     <None Remove="Protocols\**" />
