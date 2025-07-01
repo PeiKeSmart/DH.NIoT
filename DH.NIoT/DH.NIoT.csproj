@@ -5,7 +5,7 @@
     <Description>IoT standard library, which defines various communication protocol standards and specifications in the Internet of Things field, without specific implementation. Used for IoT platform construction and unifying various hardware driver protocols. IoT标准库，定义物联网领域的各种通信协议标准规范，不含具体实现。用于IoT平台建设，以及统一各种硬件驱动协议</Description>
     <Company>湖北登灏科技有限公司</Company>
     <Copyright>©2020-2025 湖北登灏科技有限公司</Copyright>
-    <VersionPrefix>4.12</VersionPrefix>
+    <VersionPrefix>4.13</VersionPrefix>
     <VersionSuffix>$([System.DateTime]::Now.ToString(`yyyy.MMdd`))</VersionSuffix>
     <Version>$(VersionPrefix).$(VersionSuffix)</Version>
     <FileVersion>$(Version)</FileVersion>
