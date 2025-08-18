@@ -5,9 +5,9 @@ on:
     branches: [ main ]
     paths:
         - 'DH.NIoT/**'
-        - 'NewLife.IoTSocket/**'
-        - 'NewLife.IoTSerial/**'
-        - 'NewLife.IoTDatabase/**'
+        - 'DH.NIoTSocket/**'
+        - 'DH.NIoTSerial/**'
+        - 'DH.NIoTDatabase/**'
   workflow_dispatch:
 
 jobs:
