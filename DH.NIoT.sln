@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DH.NIoTSerial", "DH.NIoTSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DH.NIoTSocket", "DH.NIoTSocket\DH.NIoTSocket.csproj", "{A84F555F-AD9C-F455-CB2E-67A373110838}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DH.NIoTDatabase", "DH.NIoTDatabase\DH.NIoTDatabase.csproj", "{670C0FC8-8B2D-0E28-7124-D907BBA8AC8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{A84F555F-AD9C-F455-CB2E-67A373110838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A84F555F-AD9C-F455-CB2E-67A373110838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A84F555F-AD9C-F455-CB2E-67A373110838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670C0FC8-8B2D-0E28-7124-D907BBA8AC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670C0FC8-8B2D-0E28-7124-D907BBA8AC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670C0FC8-8B2D-0E28-7124-D907BBA8AC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670C0FC8-8B2D-0E28-7124-D907BBA8AC8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
