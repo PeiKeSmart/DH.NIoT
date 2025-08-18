@@ -25,12 +25,14 @@ jobs:
           7.x
           8.x
           9.x
+    - name: Get Version
+      run: echo "VERSION=$(date '+%Y.%m%d-beta%H%M')" >> $GITHUB_ENV
     - name: Build
       run: |
-        dotnet pack --version-suffix $(date "+%Y.%m%d-beta%H%M") -c Release -o out DH.NIoT/DH.NIoT.csproj
-        dotnet pack --version-suffix $(date "+%Y.%m%d-beta%H%M") -c Release -o out DH.NIoTSocket/DH.NIoTSocket.csproj
-        dotnet pack --version-suffix $(date "+%Y.%m%d-beta%H%M") -c Release -o out DH.NIoTSerial/DH.NIoTSerial.csproj
-        dotnet pack --version-suffix $(date "+%Y.%m%d-beta%H%M") -c Release -o out DH.NIoTDatabase/DH.NIoTDatabase.csproj
+        dotnet pack --version-suffix ${{ env.VERSION }} -c Release -o out DH.NIoT/DH.NIoT.csproj
+        dotnet pack --version-suffix ${{ env.VERSION }} -c Release -o out DH.NIoTSocket/DH.NIoTSocket.csproj
+        dotnet pack --version-suffix ${{ env.VERSION }} -c Release -o out DH.NIoTSerial/DH.NIoTSerial.csproj
+        dotnet pack --version-suffix ${{ env.VERSION }} -c Release -o out DH.NIoTDatabase/DH.NIoTDatabase.csproj
     - name: Publish
       run: |
         # dotnet nuget push ./out/*.nupkg --skip-duplicate --source https://nuget.pkg.github.com/PeiKeSmart/index.json --api-key ${{ github.token }}
