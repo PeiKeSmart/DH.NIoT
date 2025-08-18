@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DH.NIoTSerial\DH.NIoTSerial.csproj" />
+    <ProjectReference Include="..\DH.NIoTSocket\DH.NIoTSocket.csproj" />
     <ProjectReference Include="..\DH.NIoT\DH.NIoT.csproj" />
   </ItemGroup>
 
