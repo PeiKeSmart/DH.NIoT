@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0;net45;net461;net462;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
-    <AssemblyTitle>IoT Standard</AssemblyTitle>
-    <Description>IoT standard library, which defines various communication protocol standards and specifications in the Internet of Things field, without specific implementation. Used for IoT platform construction and unifying various hardware driver protocols. IoT标准库，定义物联网领域的各种通信协议标准规范，不含具体实现。用于IoT平台建设，以及统一各种硬件驱动协议</Description>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;net45;net461;net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    <AssemblyTitle>IoT标准通用串口驱动</AssemblyTitle>
+    <Description>IoT驱动，符合IoT标准的通用串口驱动，连接后向目标发送数据即可收到数据。</Description>
     <Company>湖北登灏科技有限公司</Company>
     <Copyright>©2020-2025 湖北登灏科技有限公司</Copyright>
     <VersionPrefix>4.14</VersionPrefix>
@@ -28,8 +28,8 @@
     <PackageIcon>DH.png</PackageIcon>
     <RepositoryUrl>https://github.com/PeiKeSmart/DH.NIoT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>物联网;IoT;边缘计算;Edge;湖北登灏科技有限公司;DH组件;DH;$(AssemblyName)</PackageTags>
-    <PackageReleaseNotes>新增IDiscoverableDriver，为支持设备自动发现的驱动定义契约</PackageReleaseNotes>
+    <PackageTags>物联网;IoT;边缘计算;Edge;湖北登灏科技有限公司;DH组件;PLC;DH;$(AssemblyName)</PackageTags>
+    <PackageReleaseNotes>IoT驱动，符合IoT标准的通用串口驱动，连接后向目标发送数据即可收到数据。</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -41,21 +41,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ThingSpecification\PropertyExtend.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Protocols\**" />
-    <EmbeddedResource Remove="Protocols\**" />
-    <None Remove="Protocols\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="DH.NCore" Version="4.14.2025.818-beta0233" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0' or '$(TargetFramework)'=='netstandard2.1'">
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net7.0'">
+    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net8.0'">
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net9.0'">
+    <PackageReference Include="System.IO.Ports" Version="9.0.8" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,6 +70,9 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DH.NIoT\DH.NIoT.csproj" />
   </ItemGroup>
 
 </Project>
