@@ -1,6 +1,6 @@
-# NewLife Copilot 协作指令
+# PeiKeSmart Copilot 协作指令
 
-本说明适用于新生命团队（NewLife）及其全部开源 / 衍生项目。本指令用于规范在这些项目中使用 Copilot（及类似智能助手）时的行为，主要面向 C# / .NET 技术栈。
+本说明适用于沛柯智能（PeiKeSmart）及其全部开源 / 衍生项目。本指令用于规范在这些项目中使用 Copilot（及类似智能助手）时的行为，主要面向 C# / .NET 技术栈。
 
 ## 1. 目标
 - 提效：减少机械样板劳动，聚焦业务/核心算法。
@@ -9,7 +9,7 @@
 - 可靠：避免虚构、保持性能、不破坏现有合约。
 
 ## 2. 适用范围
-- 含 NewLife 组件或其衍生的全部 C# / .NET 仓库。
+- 含 PeiKeSmart 组件或其衍生的全部 C# / .NET 仓库。
 - 不含纯前端 / 非 .NET / 市场文案。
 - 存在本文件 → 必须遵循；缺失可引入。
 
@@ -38,6 +38,39 @@
 - Linq、反射仅用于非高频路径；热点使用手写循环/缓存。
 - 使用 file-scoped namespace。
 - 禁止擅自删除已有代码注释（含单行 // 与 XML 文档注释），可以修改或追加。
+
+### 5.1 现代 C# 语法偏好（优先）
+
+- 使用 switch 表达式与模式匹配（含 relational、logical、property/positional patterns）。
+- 使用集合表达式与简化初始化（C# 12）：`[]`、`[..spread]`、`"key" => value`。
+- 使用目标类型 new、文件作用域命名空间、`init`/`required` 成员、record/record struct。
+- 使用插值原始多行字符串与 `using var` 声明减少样板代码。
+
+示例（简洁优先）：
+
+```csharp
+// 文件作用域命名空间
+namespace Demo;
+
+public readonly record struct User(string Name, int Age);
+
+static string Describe(int code) => code switch
+{
+        200 => "OK",
+        >= 400 and < 500 => "ClientError",
+        >= 500 => "ServerError",
+        _ => "Other"
+};
+
+// 集合表达式（C# 12）
+var baseList = [1, 2, 3];
+List<int> list = [..baseList, 4];
+Dictionary<string, int> map = ["a" => 1, "b" => 2];
+
+// 目标类型 new 与 using 声明
+using var ms = new MemoryStream();
+List<User> users = [];
+```
 
 ## 6. 文档注释
 - `public` / `protected` 必须具备注释：`<summary>` 单行简洁；详细描述放 `<remarks>`；补充 `<param>` `<returns>`。
@@ -80,7 +113,6 @@
 - 不新增外部依赖（除非说明内置不足并给出权衡）。
 - 遇不确定上下文 → 标记“需查看文件”。
 - 不伪造：测试结果 / 性能数据 / 外部调用。
-- 回答或修改代码时，不得移除已有注释文本，可以修改或追加。
 - 修改或提交代码后，需自动在本地运行与改动相关的单元测试并确保通过；若无法定位相关测试，再运行最小必要集合或全部；若未找到任何测试，需在结果中明确说明且不自动新增测试项目。
 
 ## 12. 变更与审核说明
