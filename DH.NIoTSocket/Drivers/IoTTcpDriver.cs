@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-
 using NewLife.IoT.Drivers;
 using NewLife.Net;
 
