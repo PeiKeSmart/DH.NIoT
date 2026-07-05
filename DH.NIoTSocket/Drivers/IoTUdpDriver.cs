@@ -76,7 +76,7 @@ public class IoTUdpDriver : IoTSocketDriver, IDiscoverableDriver
         }
 
         // 等待所有子网发现完成
-        await Task.WhenAll(tasks).ConfigureAwait(false);
+        await Task.WhenAll(tasks);
 
         return devices;
     }
@@ -103,7 +103,7 @@ public class IoTUdpDriver : IoTSocketDriver, IDiscoverableDriver
             // 发送广播消息
             var data = body.GetBytes();
             var broadcastEndPoint = new IPEndPoint(broadcastAddress, port);
-            await udpClient.SendAsync(data, data.Length, broadcastEndPoint).ConfigureAwait(false);
+            await udpClient.SendAsync(data, data.Length, broadcastEndPoint);
 
             WriteLog("UDP广播发送到 {0}:{1}, 内容: {2}", broadcastAddress, port, body);
 
@@ -117,7 +117,7 @@ public class IoTUdpDriver : IoTSocketDriver, IDiscoverableDriver
                     if (remainingTime <= 0) break;
 
                     udpClient.Client.ReceiveTimeout = Math.Min(remainingTime, 1000);
-                    var result = await udpClient.ReceiveAsync().ConfigureAwait(false);
+                    var result = await udpClient.ReceiveAsync();
 
                     var responseIP = result.RemoteEndPoint.Address.ToString();
                     var responsePort = result.RemoteEndPoint.Port;

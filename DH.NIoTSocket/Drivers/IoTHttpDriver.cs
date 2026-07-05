@@ -6,9 +6,6 @@ using NewLife.IoT.Drivers;
 using NewLife.IoT.ThingModels;
 using NewLife.Reflection;
 using NewLife.Serialization;
-#if NET45
-using TaskEx = System.Threading.Tasks.Task;
-#endif
 
 namespace NewLife.IoTSocket.Drivers;
 
@@ -38,7 +35,7 @@ public class IoTHttpDriver : DriverBase<Node, HttpParameter>
         if (parameter is not HttpParameter p) throw new ArgumentException("参数不能为空");
         if (p.Address.IsNullOrEmpty()) throw new ArgumentException("网络地址不能为空");
 
-        var node = await base.OpenAsync(device, parameter).ConfigureAwait(false);
+        var node = await base.OpenAsync(device, parameter);
 
         var client = new HttpClient
         {
@@ -64,11 +61,7 @@ public class IoTHttpDriver : DriverBase<Node, HttpParameter>
         Client.TryDispose();
         Client = null;
 
-#if NET45
-        return TaskEx.FromResult(0);
-#else
-        return Task.CompletedTask;
-#endif
+        return TaskEx.CompletedTask;
     }
 
     /// <summary>读取数据</summary>
@@ -93,15 +86,15 @@ public class IoTHttpDriver : DriverBase<Node, HttpParameter>
         String? response = null;
         if (parameter.Method.EqualIgnoreCase("GET"))
         {
-            response = await client.GetStringAsync(path).ConfigureAwait(false);
+            response = await client.GetStringAsync(path);
         }
         else
         {
             var str = parameter.PostData;
             if (str.IsNullOrEmpty())
             {
-                var rs = await client.PostAsync(path, new StringContent(""), cancellationToken).ConfigureAwait(false);
-                response = await rs.Content.ReadAsStringAsync().ConfigureAwait(false);
+                var rs = await client.PostAsync(path, new StringContent(""), cancellationToken);
+                response = await rs.Content.ReadAsStringAsync();
             }
             else
             {
@@ -115,8 +108,8 @@ public class IoTHttpDriver : DriverBase<Node, HttpParameter>
                 else
                     content = new StringContent(str, Encoding.UTF8, "text/plain");
 
-                var rs = await client.PostAsync(path, content, cancellationToken).ConfigureAwait(false);
-                response = await rs.Content.ReadAsStringAsync().ConfigureAwait(false);
+                var rs = await client.PostAsync(path, content, cancellationToken);
+                response = await rs.Content.ReadAsStringAsync();
             }
         }
 
