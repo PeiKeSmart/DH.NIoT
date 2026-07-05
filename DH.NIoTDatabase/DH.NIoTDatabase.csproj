@@ -28,7 +28,7 @@
     <RepositoryUrl>https://github.com/PeiKeSmart/DH.NIoT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>物联网;IoT;边缘计算;Edge;湖北登灏科技有限公司;DH组件;PLC;DH;$(AssemblyName)</PackageTags>
-    <PackageReleaseNotes>IoT驱动，符合IoT标准的通用串口驱动，连接后向目标发送数据即可收到数据。</PackageReleaseNotes>
+    <PackageReleaseNotes>适配IDriver全异步接口与新ITransport规范；支持ControlRequest/ControlResult控制接口；升级依赖包</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
