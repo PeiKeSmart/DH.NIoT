@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NewLife.IoT.Drivers;
 using NewLife.IoT.Models;
 using NewLife.IoT.ThingSpecification;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using NewLife.IoT.Features;
 using Xunit;
@@ -11,7 +11,7 @@ public class ExpressionEngineTests
     public void ExpressionEngine_ParseAndInvoke()
     {
         var engine = new TestExpressionEngine();
-
+        
         engine.Parse("x + 1", new Dictionary<String, Type> { ["x"] = typeof(Int32) });
         Assert.True(engine.Parsed);
 
