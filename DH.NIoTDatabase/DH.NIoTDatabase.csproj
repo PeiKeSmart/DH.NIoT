@@ -40,8 +40,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.NCode" Version="4.24.2026.704-beta0450" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300">
+    <PackageReference Include="DH.NCode" Version="4.25.2026.825-beta0535" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.400">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
