@@ -29,7 +29,7 @@
     <RepositoryUrl>https://github.com/PeiKeSmart/DH.NIoT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>IoT;TCP;UDP;HTTP;Network;Socket;TcpTransport;UdpTransport;HttpTransport;IDriver;DriverBase;ITransport;Edge Computing;Industrial Automation;物联网;网络;边缘计算;工业自动化;湖北登灏科技有限公司;DH组件;PLC;DH;$(AssemblyName)</PackageTags>
-    <PackageReleaseNotes>New TcpTransport/UdpTransport/HttpTransport/SocketTransport implementing ITransport. Adapted to IDriver async interface and ITransport spec. IoTTcpDriver, IoTUdpDriver (with IDiscoverableDriver broadcast discovery), IoTHttpDriver.  新增TcpTransport/UdpTransport/HttpTransport/SocketTransport实现ITransport，适配IDriver全异步接口与ITransport规范。</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed driver &amp; transport-layer defects: atomic request-response, concurrency safety, timeout handling and resource cleanup in SocketTransport/IoTSocketDriver/IoTHttpDriver; adopt shared DriverCodec.  修复网络驱动与传输层缺陷：请求-响应原子化、并发安全、超时处理与资源清理，使用共享DriverCodec编解码。</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

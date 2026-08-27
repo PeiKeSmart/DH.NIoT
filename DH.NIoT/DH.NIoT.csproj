@@ -29,7 +29,7 @@
     <RepositoryUrl>https://github.com/PeiKeSmart/DH.NIoT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>IoT;Internet of Things;IDriver;DriverBase;ThingSpec;DataQuality;Modbus;Siemens;OPC-UA;Edge Computing;Industrial Automation;Protocol;Async;物联网;物模型;边缘计算;工业自动化;协议;异步;湖北登灏科技有限公司;DH组件;DH;$(AssemblyName)</PackageTags>
-    <PackageReleaseNotes>Async-first IDriver redesign; ReadResult/WriteResult/ControlResult structured results (WriteResult is zero-allocation struct); ITransport unified transport layer (serial/TCP/UDP/HTTP); IoTException + IoTErrorCode 3-segment error codes; DataQuality (OPC UA style); ThingSpec thing model with PropertySpec/EventSpec/ServiceSpec.  v3.0 — IDriver全异步化重构；ReadResult/WriteResult/ControlResult结构化结果；ITransport统一传输层；IoTException+IoTErrorCode三段错误码；DataQuality质量码；ThingSpec物模型。</PackageReleaseNotes>
+    <PackageReleaseNotes>Async interface for IModbus/IRelayController/IDevice with CancellationToken &amp; async report; new DriverCodec shared codec (HEX/ASCII/UTF8/Json); zero-allocation hot paths in DataHelper/TypeHelper; serial/network driver concurrency &amp; timeout fixes; 130+ new tests, 372 all pass.  v3.1 — IModbus/IRelayController/IDevice接口异步化，支持取消令牌与异步上报；新增DriverCodec共享编解码助手；采集热点路径零分配化；修复串口/网络驱动并发安全与超时缺陷；新增130+单元测试全部通过。</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>

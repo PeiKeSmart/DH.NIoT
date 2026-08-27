@@ -28,7 +28,7 @@
     <RepositoryUrl>https://github.com/PeiKeSmart/DH.NIoT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>IoT;Database;SQL;MySQL;SQLite;SqlServer;Oracle;PostgreSQL;DaMeng;XCode;DAL;IDriver;DriverBase;Edge Computing;物联网;数据库;达梦;边缘计算;湖北登灏科技有限公司;DH组件;PLC;DH;$(AssemblyName)</PackageTags>
-    <PackageReleaseNotes>Adapted to IDriver async interface and ITransport spec. SQL query results mapped to IPoint data via IoTDatabaseDriver. Built on XCode DAL for multi-database support (MySQL, SQLite, SQL Server, Oracle, PostgreSQL, DaMeng). ControlRequest/ControlResult support.  适配IDriver全异步接口与ITransport规范，通过IoTDatabaseDriver将SQL查询结果映射为IPoint数据，基于XCode DAL支持多数据库。</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed IoTDatabaseDriver defects, adopted to shared DriverCodec and IPoint spec.  修复IoTDatabaseDriver缺陷，适配共享DriverCodec编解码与IPoint规范。</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
